@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { useThemeColors } from '../../hooks/useThemeColors';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
