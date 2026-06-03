@@ -229,36 +229,28 @@ const Projects = () => {
   // project data - these are the main cards
   const projects = [
     {
-      title: "Project One",
+      title: "CodeCompass",
       description: "A brief description of your first project. Highlight the key features and what makes it unique.",
       technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
       icon: comingSoon,
-      detailsUrl: "/projects/project-one",
-      githubUrl: socialLinks.repositories.projectOne
     },
     {
-      title: "Project Two",
+      title: "ISTEM",
       description: "A brief description of your second project. Highlight the key features and what makes it unique.",
       technologies: ["Python", "Flask", "PostgreSQL", "Docker"],
       icon: comingSoon,
-      detailsUrl: "/projects/project-two",
-      githubUrl: socialLinks.repositories.projectTwo
     },
     {
       title: "Project Three",
       description: "A brief description of your third project. Highlight the key features and what makes it unique.",
       technologies: ["JavaScript", "Express", "AWS", "Tailwind CSS"],
       icon: comingSoon,
-      detailsUrl: "/projects/project-three",
-      githubUrl: socialLinks.repositories.projectThree
     },
     {
-      title: "Project Four",
+      title: "Auto-Offensive",
       description: "A brief description of your fourth project. Highlight the key features and what makes it unique.",
       technologies: ["C++", "CMake", "OpenGL"],
       icon: comingSoon,
-      detailsUrl: "/projects/project-four",
-      githubUrl: socialLinks.repositories.projectFour
     }
   ];
 

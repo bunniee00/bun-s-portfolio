@@ -1,8 +1,8 @@
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { useThemeColors } from '../../hooks/useThemeColors';
-import awsCloudFoundationsBadge from '../../assets/badges/AWS_cloud_foundations_badge.webp';
-import awsCloudPractitionerBadge from '../../assets/badges/AWS_cloud_practitioner_badge.webp';
-import citiLogo from '../../assets/badges/citi_logo.webp';
+import pre from '../../assets/badges/pre.png';
+import foundation from '../../assets/badges/foundation.png';
+import fullstack from '../../assets/badges/fullstack.png';
 
 const Certifications = () => {
   const { isDarkMode } = useDarkMode();
@@ -10,65 +10,28 @@ const Certifications = () => {
 
   const badges = [
     {
-      id: 'aws-cloud-foundations',
-      image: awsCloudFoundationsBadge,
-      alt: 'AWS Academy Cloud Foundations Badge',
-      title: 'AWS Academy Cloud Foundations',
-      subtitle: 'Academy Graduate',
-      credentialUrl: 'https://www.credly.com/badges/your-credential-id/public_url',
-      status: 'completed'
+      id: 'Pre University',
+      image: pre,
+      alt: 'pre university badge',
+      title: 'C++ Programming ',
+   
     },
     {
-      id: 'aws-cloud-practitioner',
-      image: awsCloudPractitionerBadge,
-      alt: 'AWS Cloud Practitioner Badge',
-      title: 'AWS Certified Cloud Practitioner',
-      subtitle: 'Amazon Web Services',
-      credentialUrl: 'https://www.credly.com/badges/your-credential-id/public_url',
-      status: 'completed'
+      id: 'Foundation',
+      image: foundation,
+      alt: 'foundation badge',
+      title: 'Web Application Development Foundations',
     }
   ];
 
   const credentials = [
     {
-      id: 'citi-human-subjects',
-      image: citiLogo,
-      alt: 'CITI Program Logo',
-      title: 'Social / Behavioral Research Investigator',
-      subtitle: 'Human Subjects Research',
-      issuer: 'CITI Program',
-      issued: 'Sep 2023',
-      expires: 'Sep 2026',
-      credentialId: '00000000',
-      credentialUrl: 'https://www.citiprogram.org/verify/?your-credential-id',
-      status: 'completed'
+      id: 'fullstack',
+      image: fullstack,
+      alt: 'Full Stack badge',
+      title: 'Full Stack Web Application Development',
     },
-    {
-      id: 'citi-hipaa',
-      image: citiLogo,
-      alt: 'CITI Program Logo',
-      title: 'Research and HIPAA Privacy Protections',
-      subtitle: 'Human Research',
-      issuer: 'CITI Program',
-      issued: 'Sep 2023',
-      expires: 'Sep 2026',
-      credentialId: '00000000',
-      credentialUrl: 'https://www.citiprogram.org/verify/?your-credential-id',
-      status: 'completed'
-    },
-    {
-      id: 'citi-gcp',
-      image: citiLogo,
-      alt: 'CITI Program Logo',
-      title: 'Investigational Drugs and Medical Devices',
-      subtitle: 'Good Clinical Practice',
-      issuer: 'CITI Program',
-      issued: 'Nov 2025',
-      expires: 'Nov 2028',
-      credentialId: '00000000',
-      credentialUrl: 'https://www.citiprogram.org/verify/?your-credential-id',
-      status: 'completed'
-    }
+
   ];
 
   return (

@@ -115,7 +115,7 @@ const Navigation = () => {
           }}
           onClick={() => window.location.href = '/'}
           aria-label="Your Name - Go to homepage">
-          Your Name
+          Bunvarn Rin
         </button>
         
         {/* Desktop Navigation */}

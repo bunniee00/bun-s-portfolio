@@ -19,9 +19,8 @@ const About = () => {
   const themeColors = useThemeColors();
 
   const roles = [
-    'Software Engineer',
+    'Web API Pentester',
     'Full-Stack Developer',
-    'Systems Engineer',
     'Frontend Developer',
   ];
 
@@ -213,7 +212,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl mx-auto gap-8">
             <div className="text-left w-full md:w-auto">
               <div className="ascii-container justify-start text-3xl md:text-4xl lg:text-5xl">
-                <AsciiMorphText text="Hi, I'm Your Name" />
+                <AsciiMorphText text="Hi, I'm Bunvarn" />
               </div>
               <div className="hero-subtitle justify-start text-base md:text-lg lg:text-xl mt-2">
                 <div className="flex flex-wrap items-center justify-start">
@@ -275,27 +274,99 @@ const About = () => {
             </div>
 
             {/* About Me Journal Image */}
-            <div className="w-full md:max-w-2xl lg:max-w-4xl relative z-20 px-1 md:px-0">
-              <picture>
-                <source
-                  srcSet={`${aboutMeJournalWebp400} 400w, ${aboutMeJournalWebp800} 800w`}
-                  sizes="(max-width: 375px) 320px, (max-width: 480px) 400px, (max-width: 768px) 450px, 800px"
-                  type="image/webp"
-                />
-                {/* fallback for browsers that dont support webp */}
-                <img
-                  src={aboutMeJournalWebp400}
-                  alt="Journal page with handwritten personal introduction and interests"
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
-                  onClick={() => setShowProfileModal(true)}
-                  width="400"
-                  height="300"
-                  fetchPriority="high"
-                  loading="eager"
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                />
-              </picture>
-            </div>
+
+<div className="w-full md:max-w-2xl lg:max-w-4xl relative z-20 px-1 md:px-0">
+  <div className="relative">
+    <picture>
+      <source
+        srcSet={`${aboutMeJournalWebp400} 400w, ${aboutMeJournalWebp800} 800w`}
+        sizes="(max-width: 375px) 320px, (max-width: 480px) 400px, (max-width: 768px) 450px, 800px"
+        type="image/webp"
+      />
+      <img
+        src={aboutMeJournalWebp400}
+        alt="Journal page with handwritten personal introduction and interests"
+        className="w-full h-auto object-contain"
+        width="400"
+        height="300"
+        fetchPriority="high"
+        loading="eager"
+        style={{ maxWidth: '100%', height: 'auto' }}
+      />
+    </picture>
+              <div
+  className="absolute"
+  style={{
+    top: '15%',
+    right: '6%',
+    width: '40%',
+    fontFamily: '"Caveat", cursive',
+    color: '#3a3a3a',
+  }}
+>
+  <p style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '8px' }}>hi!</p>
+  <p style={{ fontSize: '0.85rem', lineHeight: '1.7' }}>
+    I'm a Full-Stack Developer and Web API Pentester passionate about building
+    things that are both secure and beautiful.
+  </p>
+  <p style={{ fontSize: '0.85rem', lineHeight: '1.7', marginTop: '10px' }}>
+    When I'm not coding, you'll probably find me exploring new tech, playing games,
+    or drinking too much coffee 
+    {profile1 && (
+    <div style={{
+      backgroundColor: 'white',
+      padding: '4px 4px 16px 4px',
+      boxShadow: '2px 3px 8px rgba(0,0,0,0.2)',
+      transform: 'rotate(-2deg)',
+      width: '69%',
+    }}>
+      <img
+        src={profile1}
+        alt="Photo 1"
+        style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }}
+      />
+    </div>
+  )}
+  </p>
+</div>
+
+    {/* Polaroid photo overlay on left page of journal */}
+    {profile2 && (
+      <div
+        className="absolute"
+        style={{
+          top: '15%',
+          left: '8%',
+          width: '35%',
+          transform: 'rotate(-3deg)',
+          filter: 'drop-shadow(3px 4px 6px rgba(0,0,0,0.3))',
+        }}
+      >
+        
+        
+        {/* Polaroid frame */}
+        <div style={{
+          backgroundColor: 'white',
+          padding: '6px 6px 24px 6px',
+          boxShadow: '2px 4px 10px rgba(0,0,0,0.25)',
+        }}>
+          
+          <img
+            src={profile2}
+            alt="Profile photo"
+            style={{
+              width: '100%',
+             aspectRatio: '3/4',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+        </div>
+        
+      </div>
+    )}
+  </div>
+</div>
           </div>
         </div>
       </div>

@@ -8,34 +8,30 @@ const Experience = () => {
   const themeColors = useThemeColors();
   const experiences = [
     {
-      title: "Your Job Title",
-      company: "Company Name",
-      location: "City, State",
-      period: "Month Year - Month Year",
+      title: "Pre-University",
+      company: "ISTAD",
+      location: "Cambodia",
+      period: "2023 - Present",
       description: [
-        "Description of your role and accomplishments",
+        "Pre-University Student",
       ]
     },
     {
-      title: "Your Job Title",
-      company: "Company Name",
-      location: "City, State",
-      period: "Month Year - Month Year",
+      title: "Foundation",
+      company: "ISTAD",
+      location: "Cambodia",
+      period: "2024 - Present",
       description: [
-        "Description of your role and accomplishments",
-        "Another accomplishment or responsibility",
-        "One more key achievement",
+        "Foundation Student",
       ]
     },
     {
-      title: "Your Job Title",
-      company: "Company Name",
-      location: "City, State",
-      period: "Month Year - Month Year",
+      title: "Full-Stack Developer",
+      company: "ISTAD",
+      location: "Cambodia",
+      period: "2025 - Present",
       description: [
-        "Description of your role and accomplishments",
-        "Another accomplishment or responsibility",
-        "One more key achievement",
+        "Full-Stack Student",
       ]
     }
   ];
