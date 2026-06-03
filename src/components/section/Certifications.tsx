@@ -50,7 +50,6 @@ const Certifications = () => {
         <h2 className="text-4xl font-bold text-center mb-6" style={{ color: isDarkMode ? themeColors.colors.white : themeColors.colors.pink[500] }}>Certifications & Credentials</h2>
 
         <div className="max-w-6xl mx-auto">
-          {/* AWS Certifications */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             {badges.map((badge) => {
               const BadgeComponent = () => (
@@ -104,7 +103,7 @@ const Certifications = () => {
                     <img
                       src={credential.image}
                       alt={credential.alt}
-                      className="w-32 h-32 md:w-40 md:h-40 object-contain transition-transform duration-300 group-hover:scale-105"
+                     className="w-48 h-48 md:w-56 md:h-56 object-contain transition-transform duration-300 group-hover:scale-105"
                       loading="lazy"
                       width="160"
                       height="160"
