@@ -8,7 +8,14 @@ const Certifications = () => {
   const { isDarkMode } = useDarkMode();
   const themeColors = useThemeColors();
 
-  const badges = [
+  type CertificationItem = {
+    id: string;
+    image: string;
+    alt: string;
+    title: string;
+  };
+
+  const badges: CertificationItem[] = [
     {
       id: 'Pre University',
       image: pre,
@@ -63,15 +70,14 @@ const Certifications = () => {
                     {badge.title}
                   </h3>
                   <p className="text-center text-sm" style={{ color: isDarkMode ? themeColors.colors.dark[300] : themeColors.colors.dark[600] }}>
-                    {badge.subtitle || (badge.status === 'in-progress' ? 'In Progress!' : '')}
                   </p>
                 </div>
               );
 
-              return badge.credentialUrl ? (
+              return badge ? (
                 <a
                   key={badge.id}
-                  href={badge.credentialUrl}
+                
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block transition-transform duration-300 hover:scale-105 cursor-pointer focus:outline-none"
@@ -82,7 +88,7 @@ const Certifications = () => {
                   <BadgeComponent />
                 </a>
               ) : (
-                <div key={badge.id} className="block">
+                <div key={badge} className="block">
                   <BadgeComponent />
                 </div>
               );
@@ -108,16 +114,11 @@ const Certifications = () => {
                   <h3 className="text-center text-sm font-medium mb-2" style={{ color: isDarkMode ? themeColors.colors.pink[300] : themeColors.colors.pink[500] }}>
                     {credential.title}
                   </h3>
-                  <p className="text-center text-sm" style={{ color: isDarkMode ? themeColors.colors.dark[300] : themeColors.colors.dark[600] }}>
-                    {credential.subtitle || (credential.status === 'in-progress' ? 'In Progress!' : '')}
-                  </p>
                 </div>
               );
 
-              return credential.credentialUrl ? (
+              return credential ? (
                 <a
-                  key={credential.id}
-                  href={credential.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block transition-transform duration-300 hover:scale-105 cursor-pointer focus:outline-none"
@@ -128,7 +129,7 @@ const Certifications = () => {
                   <BadgeComponent />
                 </a>
               ) : (
-                <div key={credential.id} className="block">
+                <div key={credential} className="block">
                   <BadgeComponent />
                 </div>
               );

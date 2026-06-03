@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
 import { Badge } from '../ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 import { ExternalLink, Code, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
-import { socialLinks } from '../../config/socialLinks';
 import { lightStars, darkStars, specialStars } from '../../assets/stars';
 import { comingSoon } from '../../assets';
 
@@ -471,31 +470,7 @@ const Projects = () => {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div className="flex flex-wrap gap-2 mb-4" style={{ flex: '1 0 auto' }}>
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs"
-                        style={{
-                          backgroundColor: themeColors.interactive.primary,
-                          color: themeColors.text.accent,
-                          borderColor: themeColors.primary,
-                          border: '1px solid'
-                        }}>
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-3" style={{ marginTop: 'auto', paddingTop: '8px' }}>
-                    <Link to={project.detailsUrl} className="project-btn flex items-center gap-1" style={{ textDecoration: 'none', color: 'white' }} aria-label={`View ${project.title} project details`}>
-                      <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                      Details
-                    </Link>
-                    <a href={project.githubUrl} className="project-btn-outline flex items-center gap-1" style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code on GitHub`}>
-                      <Code className="h-4 w-4" aria-hidden="true" />
-                      Code
-                    </a>
-                  </div>
-                </CardContent>
+
               </Card>
             ))}
 
